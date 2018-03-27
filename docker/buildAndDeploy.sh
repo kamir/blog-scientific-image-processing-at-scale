@@ -1,12 +1,12 @@
-docker build --no-cache -t kamir/cdsw-base-4-maven-rosbag-extractor-v2 . 
+docker build --no-cache -t kamir/cdsw-base-4-maven-rosbag-extractor-v3 . 
 
-docker push kamir/cdsw-base-4-maven-rosbag-extractor-v2:latest
+docker push kamir/cdsw-base-4-maven-rosbag-extractor-v3:latest
 
 export T=$(date +%I_%M_%S)
 echo "current time is: "$T
 
 docker image ls
-docker run -it -d --name container_$T kamir/cdsw-base-4-maven-rosbag-extractor-v2 
+docker run -it -d --name container_$T kamir/cdsw-base-4-maven-rosbag-extractor-v3
 
 docker container ls
 
