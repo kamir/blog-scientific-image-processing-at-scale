@@ -16,8 +16,6 @@ RUN mkdir /ciw
 RUN mkdir /ciw/external
 RUN mkdir /ciw/libs
 
-
-
 #
 # Install Hadoop.TS.NG Library
 #
@@ -26,17 +24,15 @@ COPY hadoop-ts-ng-2.5.0-jar-with-dependencies.jar /ciw/libs/hadoop-ts-ng-2.5.0-j
 
 RUN mvn install:install-file -Dfile=/ciw/libs/hadoop-ts-ng-2.5.0.jar -DgroupId=com.cloudera -DartifactId=hadoop-ts-ng -Dversion=2.5.0 -Dpackaging=jar -DskipTests
 
-
-
 WORKDIR /ciw/external
 RUN git clone https://github.com/kamir/rosbag-reader-java
 WORKDIR /ciw/external/rosbag-reader-java
-RUN mvn clean compile install -U
+RUN mvn clean compile package install -U
 
 WORKDIR /ciw/external
 RUN git clone https://github.com/kamir/rosbag-extractor
 WORKDIR /ciw/external/rosbag-extractor
-RUN mvn clean compile install -U
+RUN mvn clean compile package install -U
 
 #
 # ImageJ
