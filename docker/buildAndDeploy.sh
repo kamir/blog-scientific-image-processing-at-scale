@@ -1,6 +1,6 @@
 docker build -t kamir/cdsw-base-4-with-maven-ij-rosbag-extractor . 
 
-
+docker push kamir/cdsw-base-4-with-maven-ij-rosbag-extractor:latest
 
 export T=$(date +%I_%M_%S)
 echo "current time is: "$T
