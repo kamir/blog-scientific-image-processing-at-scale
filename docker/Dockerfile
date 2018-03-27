@@ -11,7 +11,10 @@ RUN apt-get update && \
 
 RUN pip install --upgrade pip && \
     pip install graphviz
+
+RUN mkdir /ciw
 RUN mkdir /ciw/external
+
 
 
 
