@@ -29,19 +29,9 @@ RUN git clone https://github.com/kamir/rosbag-extractor
 #WORKDIR /ciw/rosbag-extractor
 #RUN mvn clean compile install -U
 
-
-
-# Define working directory.
-WORKDIR /fiji
-
-# Install Fiji.
-RUN \
-      curl -O http://update.imagej.net/bootstrap.js && \
-      jrunscript bootstrap.js update-force-pristine
-
-# Add fiji to the PATH
-ENV PATH $PATH:/fiji
-
-# Define default command.
-CMD ["fiji-linux64"]
-
+WORKDIR /ciw
+WORKDIR /ciw
+RUN mkdir /ciw/libs
+RUN curl -O http://wsr.imagej.net/distros/linux/ij150-linux64-java8.zip && \
+    unzip ij150-linux64-java8.zip && \
+    rm ij150-linux64-java8.zip
