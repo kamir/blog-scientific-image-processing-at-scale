@@ -35,8 +35,8 @@ RUN mvn clean compile install -U
 
 WORKDIR /ciw/external
 RUN git clone https://github.com/kamir/rosbag-extractor
-#WORKDIR /ciw/external/rosbag-extractor
-#RUN mvn clean compile install -U
+WORKDIR /ciw/external/rosbag-extractor
+RUN mvn clean compile install -U
 
 #
 # ImageJ
