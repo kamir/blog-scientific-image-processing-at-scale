@@ -1,4 +1,4 @@
-docker build -t kamir/cdsw-base-4-maven-rosbag-extractor-v2 . 
+docker build --no-cache -t kamir/cdsw-base-4-maven-rosbag-extractor-v2 . 
 
 docker push kamir/cdsw-base-4-maven-rosbag-extractor-v2 :latest
 
