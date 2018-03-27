@@ -19,13 +19,13 @@ RUN git clone https://github.com/kamir/rosbag-reader-java
 #WORKDIR /ciw/rosbag-reader-java
 #RUN mvn clean compile install -U
 
-WORKDIR /ciw
-RUN git clone https://github.com/kamir/Hadoop.TS.NG
+#WORKDIR /ciw
+#RUN git clone https://github.com/kamir/Hadoop.TS.NG
 #WORKDIR /ciw/Hadoop.TS.NG
 #RUN mvn clean compile install -U
 
-#WORKDIR /ciw
-#RUN git clone https://github.com/kamir/rosbag-extractor
+WORKDIR /ciw
+RUN git clone https://github.com/kamir/rosbag-extractor
 #WORKDIR /ciw/rosbag-extractor
 #RUN mvn clean compile install -U
 
