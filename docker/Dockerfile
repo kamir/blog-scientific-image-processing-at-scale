@@ -1,6 +1,10 @@
 # Dockerfile
 FROM docker.repository.cloudera.com/cdsw/engine:4
 
+#
+# JCuda Support is currently not implemented.
+#
+
 MAINTAINER Mirko Kämpf "mirko@cloudera.com"
 
 # update packages and install maven
