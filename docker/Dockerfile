@@ -29,6 +29,11 @@ RUN git clone https://github.com/kamir/rosbag-extractor
 #WORKDIR /ciw/rosbag-extractor
 #RUN mvn clean compile install -U
 
+#
+# ImageJ
+#
+# https://imagej.nih.gov/ij/download.html
+#
 RUN mkdir /ciw/libs
 WORKDIR /ciw/libs
 RUN curl -O http://wsr.imagej.net/distros/linux/ij150-linux64-java8.zip && \
