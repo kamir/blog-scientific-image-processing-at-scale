@@ -25,13 +25,13 @@ RUN mvn clean compile install -U
 
 WORKDIR /ciw/external
 RUN git clone https://github.com/kamir/Hadoop.TS.NG
-WORKDIR /ciw/external/Hadoop.TS.NG
-RUN mvn clean compile install -U
+#WORKDIR /ciw/external/Hadoop.TS.NG
+#RUN mvn clean compile install -U
 
 WORKDIR /ciw/external
 RUN git clone https://github.com/kamir/rosbag-extractor
-WORKDIR /ciw/external/rosbag-extractor
-RUN mvn clean compile install -U
+#WORKDIR /ciw/external/rosbag-extractor
+#RUN mvn clean compile install -U
 
 #
 # ImageJ
