@@ -1,4 +1,4 @@
-docker build -t kamir/cdsw-base-3-with-maven-fiji-gnuplot . 
+docker build -t kamir/cdsw-base-4-with-maven-fiji-rosbag-extractor . 
 
 
 
@@ -9,7 +9,7 @@ echo "current time is: ".$T
 
 docker image ls
 
-docker run -it -d --name container_$T kamir/cdsw-base-3-with-maven-fiji-gnuplot
+docker run -it -d --name container_$T kamir/cdsw-base-4-with-maven-fiji-rosbag-extractor
 
 docker container ls
 
