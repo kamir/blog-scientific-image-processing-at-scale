@@ -1,15 +1,15 @@
-docker build -t kamir/cdsw-base-4-with-maven-fiji-rosbag-extractor . 
+docker build -t kamir/cdsw-base-4-with-maven-ij-rosbag-extractor . 
 
 
 
 export T=$(date +%I_%M_%S)
-echo "current time is: ".$T
+echo "current time is: "$T
 
 
 
 docker image ls
 
-docker run -it -d --name container_$T kamir/cdsw-base-4-with-maven-fiji-rosbag-extractor
+docker run -it -d --name container_$T kamir/cdsw-base-4-with-maven-ji-rosbag-extractor
 
 docker container ls
 
