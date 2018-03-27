@@ -5,7 +5,7 @@ MAINTAINER Mirko Kämpf "mirko@cloudera.com"
 
 # update packages and install maven
 RUN apt-get update && \
-    apt-get install -y -q graphviz maven mc git && \
+    apt-get install -y -q graphviz gnuplot maven mc git default-jdk && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
