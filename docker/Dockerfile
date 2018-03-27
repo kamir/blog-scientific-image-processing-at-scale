@@ -14,7 +14,15 @@ RUN pip install --upgrade pip && \
 
 RUN mkdir /ciw
 RUN mkdir /ciw/external
+RUN mkdir /ciw/libs
 
+
+
+#
+# Install Hadoop.TS.NG Library
+#
+RUN cp /root/ciw/libs/*.jar /ciw/libs
+RUN mvn install:install-file -Dfile=/ciw/libs/hadoop-ts-ng-2.5.0.jar -DgroupId=com.cloudera -DartifactId=hadoop-ts-ng -Dversion=2.5.0 -Dpackaging=jar -DskipTests
 
 
 
@@ -22,11 +30,6 @@ WORKDIR /ciw/external
 RUN git clone https://github.com/kamir/rosbag-reader-java
 WORKDIR /ciw/external/rosbag-reader-java
 RUN mvn clean compile install -U
-
-WORKDIR /ciw/external
-RUN git clone https://github.com/kamir/Hadoop.TS.NG
-#WORKDIR /ciw/external/Hadoop.TS.NG
-#RUN mvn clean compile install -U
 
 WORKDIR /ciw/external
 RUN git clone https://github.com/kamir/rosbag-extractor
