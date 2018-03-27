@@ -21,7 +21,9 @@ RUN mkdir /ciw/libs
 #
 # Install Hadoop.TS.NG Library
 #
-RUN cp /root/ciw/libs/*.jar /ciw/libs
+RUN cp /root/ciw/libs/hadoop-ts-ng-2.5.0.jar /ciw/libs/hadoop-ts-ng-2.5.0.jar
+RUN cp /root/ciw/libs/hadoop-ts-ng-2.5.0-jar-with-dependencies.jar /ciw/libs/hadoop-ts-ng-2.5.0-jar-with-dependencies.jar
+
 RUN mvn install:install-file -Dfile=/ciw/libs/hadoop-ts-ng-2.5.0.jar -DgroupId=com.cloudera -DartifactId=hadoop-ts-ng -Dversion=2.5.0 -Dpackaging=jar -DskipTests
 
 
