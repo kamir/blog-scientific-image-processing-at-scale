@@ -9,7 +9,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install graphviz
+RUN pip install --upgrade pip && \
+    pip install graphviz
 RUN mkdir /ciw/external
 
 
