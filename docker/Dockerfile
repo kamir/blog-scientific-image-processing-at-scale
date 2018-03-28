@@ -3,9 +3,9 @@ FROM docker.repository.cloudera.com/cdsw/engine:4
 
 MAINTAINER Mirko Kämpf "mirko@cloudera.com"
 
-# update packages and install maven
+# update packages and install maven mc git JDK
 RUN apt-get update && \
-    apt-get install -y -q graphviz gnuplot maven mc git default-jdk && \
+    apt-get install -y -q gnuplot maven mc git default-jdk && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
